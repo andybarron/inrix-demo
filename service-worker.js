@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/inrix-demo/precache-manifest.b976adfeaf1c992040c2edcdac5b7f93.js"
+  "/inrix-demo/precache-manifest.94649d7d7f05b430b85771e916a68fb8.js"
 );
 
 self.addEventListener('message', (event) => {
