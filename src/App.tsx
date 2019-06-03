@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Intersection from './Intersection';
+import { IMAGE_URL, WIDTH, HEIGHT, LANE_MAP, IEdges } from './constants';
 
-const App: React.FC = () => {
+function App() {
+  const [edges, setEdges] = React.useState<IEdges>({
+    // ['A' + EDGE_SEPARATOR + 'L']: true,
+  });
+  function onEdgeUpdate(edge: string, connected: boolean) {
+    setEdges(prev => ({ ...prev, [edge]: connected }));
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Intersection
+        edges={edges}
+        height={HEIGHT}
+        imageUrl={IMAGE_URL}
+        laneMap={LANE_MAP}
+        onEdgeUpdate={onEdgeUpdate}
+        width={WIDTH}
+      />
+      <pre>{'DEBUG\n-----\n' + JSON.stringify({ edges }, null, 2)}</pre>
+    </React.Fragment>
   );
 }
 
