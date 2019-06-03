@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.js": "/inrix-demo/static/js/main.4017d999.chunk.js",
+    "main.js.map": "/inrix-demo/static/js/main.4017d999.chunk.js.map",
+    "runtime~main.js": "/inrix-demo/static/js/runtime~main.222abce2.js",
+    "runtime~main.js.map": "/inrix-demo/static/js/runtime~main.222abce2.js.map",
+    "index.html": "/inrix-demo/index.html",
+    "precache-manifest.b976adfeaf1c992040c2edcdac5b7f93.js": "/inrix-demo/precache-manifest.b976adfeaf1c992040c2edcdac5b7f93.js",
+    "service-worker.js": "/inrix-demo/service-worker.js"
+  }
+}
